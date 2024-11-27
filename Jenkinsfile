@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t ylmt/flaskap:$BUILD_NUMBER .'
+                sh 'docker build -t logeswaran1/flaskap:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push ylmt/flaskap:$BUILD_NUMBER'
+                sh 'docker push logeswaran1/flaskap:$BUILD_NUMBER'
             }
         }
 }
